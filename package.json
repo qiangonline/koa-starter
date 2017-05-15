@@ -1,0 +1,42 @@
+{
+  "name": "koa-starter",
+  "version": "1.0.0",
+  "description": "koa starter",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run lint && npm run clean && gulp build",
+    "clean": "rimraf build",
+    "dev": "gulp",
+    "lint": "tslint ./src/**/*.ts",
+    "test": "",
+    "prestart": "npm install --only=production",
+    "start": "pm2 start process.json --env production",
+    "stop": "pm2 stop process.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bunyan": "0.0.36",
+    "@types/koa": "^2.0.39",
+    "@types/koa-hbs": "^1.0.1",
+    "@types/koa-router": "^7.0.22",
+    "@types/koa-static": "^2.0.22",
+    "@types/lodash": "^4.14.58",
+    "bunyan": "^1.8.10",
+    "koa": "^2.2.0",
+    "koa-bunyan-logger": "^2.0.0",
+    "koa-hbs": "^1.0.0-alpha.1",
+    "koa-router": "^7.0.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-typescript": "^3.1.6",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.2"
+  }
+}
