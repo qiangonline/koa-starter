@@ -7,4 +7,4 @@ const config: {
     port: number
 } = JSON.parse(readFileSync(join(__dirname, `../../config/config.${env}.json`), 'utf-8'));
 
-export default config;
+export { config };

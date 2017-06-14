@@ -1,11 +1,12 @@
 import * as Koa from 'koa';
 import * as koaBunyanLogger from 'koa-bunyan-logger';
 import * as serve from 'koa-static';
+
 import * as hbs from 'koa-hbs';
 
-import config from './core/config';
+import { config } from './core/config';
 
-import router from './components/router';
+import { route } from './components/route';
 
 const app = new Koa();
 
@@ -39,7 +40,7 @@ app
         partialsPath: __dirname + '/views/partials',
         disableCache: config.debug
     }))
-    .use(router())
+    .use(route())
 
     .listen(config.port, () => {
         console.log(`app started.`);
