@@ -1,6 +1,7 @@
 import * as Koa from 'koa';
 import * as Logger from 'bunyan';
 
+export = koaBunyanLogger;
 
 declare function koaBunyanLogger(logger?: Logger.LoggerOptions | Logger): Koa.Middleware;
 
@@ -10,7 +11,6 @@ declare namespace koaBunyanLogger {
     function timeContext(opts?: Logger.LoggerOptions): Koa.Middleware;
 }
 
-export = koaBunyanLogger;
 
 declare module 'koa' {
     export interface Context {
